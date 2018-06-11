@@ -57,13 +57,13 @@ public:
     }
 
     template <typename T> TestCase check_output(T A, string s){
-        ostringstream absorb;
+        ostringstream absorb, text;
         absorb<<A;
         if(absorb.str()!=s){
             failer_count++;
-            absorb<<test_name<<": Failure in test # "<<counter<<": string value should be "<<s<<" but is "<<absorb.str()<<endl;
-            string s=absorb.str();
-            omessage.write(s.c_str(),s.size());
+            text<<test_name<<": Failure in test # "<<counter<<": string value should be "<<s<<" but is "<<absorb.str()<<endl;
+            string s1=text.str();
+            omessage.write(s1.c_str(),s1.size());
         }
         counter++;
         return  *this;
