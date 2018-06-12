@@ -35,7 +35,7 @@ public:
         else{
             failer_count++;
             ostringstream absorb;
-            absorb<<test_name<<": Failure in test #"<<counter<<A<<": should equal "<<B<<endl;
+            absorb<<test_name<<": Failure in test #"<<counter<<": "<<A<<": should equal "<<B<<endl;
             string s=absorb.str();
             omessage.write(s.c_str(),s.size());
         }
@@ -61,7 +61,7 @@ public:
         absorb<<A;
         if(absorb.str()!=s){
             failer_count++;
-            text<<test_name<<": Failure in test # "<<counter<<": string value should be "<<s<<" but is "<<absorb.str()<<endl;
+            text<<test_name<<": Failure in test #"<<counter<<": string value should be "<<s<<" but is "<<absorb.str()<<endl;
             string s1=text.str();
             omessage.write(s1.c_str(),s1.size());
         }
