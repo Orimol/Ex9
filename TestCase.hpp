@@ -35,7 +35,7 @@ public:
         else{
             failer_count++;
             ostringstream absorb;
-            absorb<<test_name<<": Failure in test #"<<counter<<A<<": should equal"<<B<<endl;
+            absorb<<test_name<<": Failure in test #"<<counter<<A<<": should equal "<<B<<endl;
             string s=absorb.str();
             omessage.write(s.c_str(),s.size());
         }
